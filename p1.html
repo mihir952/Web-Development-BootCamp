@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    ol li {
+      color: rgb(12, 231, 67);
+    }
+    p[draggable] {
+      color: aquamarine;
+    }
+    li[value="5"] {
+      color: crimson !important;
+    }
+  </style>
+  <body>
+    <h1>The Best Movies According to Mihir</h1>
+    <h2>My Top 3 Movies of all-time</h2>
+    <hr />
+    <h3>Spirited Away</h3>
+    <p draggable="true">This is my Favourite Movie.</p>
+    <h3>Spirited Away</h3>
+    <p>This is my Favourite Movie.</p>
+    <h3>Spirited Away</h3>
+    <p>This is my Favourite Movie.</p>
+    <hr />
+    <ol
+      style="
+        background: rgb(228, 228, 230);
+        font-family: Arial, Helvetica, sans-serif;
+      "
+    >
+      <li>Milk</li>
+      <li>Egg</li>
+      <li>Rice</li>
+      <ul>
+        <li>Dinner</li>
+        <li value="5">Lunch</li>
+        <li>Brunch</li>
+      </ul>
+    </ol>
+    <hr />
+    <ul>
+      <li><a href="https://www.google.co.in/webhp?gl=in">Google Website</a></li>
+      <li>
+        <a href="https://www.google.co.in/webhp?gl=in">Google Language</a>
+      </li>
+      <li><a href="https://www.google.co.in/maps">Google Maps</a></li>
+    </ul>
+    <img src="pic_trulli.jpg" alt="Ari Emanuel" />
+    <script>
+      //    var name= prompt("What is your name");
+      //    console.log(name)
+      var name = prompt("What is Your Name??");
+      var newname = name.toUpperCase();
+      alert(newname);
+    </script>
+  </body>
+</html>
