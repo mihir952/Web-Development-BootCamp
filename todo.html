@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h1,h2{
+        color: blueviolet;
+    }
+    .main > p{
+        color:firebrick
+    }
+    .list li{
+        color: blue;
+    }
+    .box1{
+        background-color: aqua;
+        width: 200px;
+        height: 200px;
+        position: static;
+        left: 50px;
+        top: 50px;
+
+        
+    }
+    .box2{
+        background-color: rgb(55, 0, 255);
+        width: 200px;
+        height: 200px;
+        position: relative;
+        left: 50px;
+        top: 50px;
+    }
+    .box3{
+        background-color: aqua;
+        width: 200px;
+        height: 200px;
+        position: fixed;
+        left: 500px;
+        top: 50px;
+    }
+</style>
+<body>
+    <div class="box3">
+
+    </div>
+    <h1>To Do List</h1>
+    <h2>Monday</h2>
+    <div class="main">
+        <p>Do these things today!</p>
+        <ul class="list">
+            <li>Wash clothes</li>
+            <li>Read</li>
+            <li>Math Questions</li>
+        </ul>
+    </div>
+    <ul>
+        <p>Others items</p>
+        <li>testing Purpose</li>
+    </ul>
+    <p>The best preperation for tommorow is doing your best today.</p>
+    <div>
+        <h1>static position</h1>
+        <div class="box1">
+
+        </div>
+        <h2>Relative position</h2>
+        <div class="box2"></div>
+    </div>
+</body>
+</html>
