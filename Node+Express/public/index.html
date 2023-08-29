@@ -18,3 +18,30 @@
     </form>
 </body>
 </html>
+
+
+
+
+
+class Solution {
+    public:
+        int maximumProduct(vector<int>& nums) {
+            sort(nums.begin(), nums.end());  // Corrected the sorting syntax
+            int n = nums.size();  // Store the size of the vector
+            int ans;
+    
+            // Handle cases where the array has at least 3 elements
+            if (nums[n - 1] < 0 || nums[0] >= 0) {
+                // If all elements are negative or non-negative, choose the three largest elements
+                ans = nums[n - 1] * nums[n - 2] * nums[n - 3];
+            } else {
+                // If both negative and non-negative elements are present, consider two cases
+                int option1 = nums[0] * nums[1] * nums[n - 1];  // Product of two smallest and the largest
+                int option2 = nums[n - 1] * nums[n - 2] * nums[n - 3];  // Product of three largest
+                ans = max(option1, option2);
+            }
+    
+            return ans;
+        }
+    };
+    
