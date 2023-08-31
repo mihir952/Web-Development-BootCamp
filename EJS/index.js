@@ -1,35 +1,19 @@
 import express from "express";
+import bodyParser from "body-parser";
+  const app=express();
+  const port=3000;
 
 
-const app=express();
-const port=3000;
+  app.use(bodyParser.urlencoded({extended:true}));
 
+  app.get("/",(req,res)=>{
+        res.render("index.ejs");
+  })
+  app.post("/submit",(req,res)=>{
+        const numletter=req.body['Fname'].length + req.body['lname'].length;
+        res.render("index.ejs",{numberofletter:numletter});
+  })
 
-app.get("/",(req,res)=>{
-    const today=new Date();
-    const day=today.getDay();
-    // console.log(day)
-
-    let type="a weekday";
-    let adv="Its time to work Hard";
-
-    if(day==0 || day==6){
-        type="a weekday";
-        adv="Its time to have some fun";
-    }
-    else if(day==2){
-        type="Hanuman day";
-        adv="Its Hanuman Day Read Hanuman Chalisa";
-    }
-
-    res.render("index.ejs",{
-        dayType:type,
-        advice:adv,
-    })
-})
-
-
-app.listen(port,()=>{
-    console.log(`App is Running at port : ${port}`);
-})
-
+  app.listen(port,()=>{
+    console.log(`App is running at server ${port}`)
+  })

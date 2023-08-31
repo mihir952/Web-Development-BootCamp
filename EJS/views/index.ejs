@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weekday Manipulation</title>
+    <title>Document</title>
 </head>
 <body>
-    <h1>hey ,Its <%=dayType  %> ,<%= advice  %>!</h1>
+    <h1>Enter your Name down!!</h1>
+    <h2>Number of letter in your Name is <%=local.numberofletter  %></h2>
+    <form action="/submit" method="POST">
+        <input type="text" name="Fname" placeholder="First Name">
+        <input type="text" name="lname" placeholder="Last Name">
+        <input type="submit" value="OK">
+
+    </form>
 </body>
 </html>
