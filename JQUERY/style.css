@@ -1,0 +1,16 @@
+/* body{
+    background-color: blueviolet;
+} */
+.col{
+    background-color: aqua;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.col1{
+    font-size: 5rem;
+}
+
+h1{
+    color: brown;
+    font-size: 50px;
+}
