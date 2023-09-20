@@ -54,6 +54,15 @@
 
 
 
-$('button').on("click",function(){
-    $('h1').slideUp().slideDown().animate({opacity:0.5});
+$('button:eq(1)').on("click",function(){
+    $('h1').slideUp().slideDown().animate().hide({opacity:0.5});
 })
+
+$('button:eq(2)').on("click",function(){
+    $('h1').slideUp().slideDown().show().animate({opacity:0.5});
+})
+
+
+
+
+// for selecting particular button using index value we can use ("tag:eq(i)")
