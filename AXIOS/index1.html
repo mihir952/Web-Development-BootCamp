@@ -21,7 +21,8 @@
             const getdata=document.getElementById("getdata");
             getdata.addEventListener("click",function(){
                 axios.get("https://jsonplaceholder.typicode.com/todos/1")
-                .then(function(response){
+                 .then(function(response){
+                    debugger
                     const data=response.data;
                     console.log(data);
               

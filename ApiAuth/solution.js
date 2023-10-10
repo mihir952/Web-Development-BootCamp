@@ -72,3 +72,13 @@ app.get("/bearerToken", async (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
+//Localization 
+// fetchContent();
+// const translatePage=()=>{
+//   document.querySelectorAll('[localizedation-key]').forEach((element)=>{
+//     let key=element.getAttribute('localization-key');
+//     let translation=translation[key];
+//     element.innerText=translation;
+//   })
+// }

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling and Capturing  Concept</title>
+</head>
+<style>
+    body{
+        padding: 100px;
+        background-color: bisque;
+       
+    }
+    #container{
+        padding: 50px;
+        margin: 50px;
+        background-color: aquamarine;
+    }
+    #btn{
+        padding:20px;
+        background-color: antiquewhite;
+    }
+</style>
+<body>
+    <div id="container">
+        <button id="btn">
+            Click Me
+        </button>
+    </div>
+
+    <script>
+        let d=document.getElementById('container');
+        let btn=document.getElementById('btn');
+
+
+        //This is for Capturing Event
+        // d.addEventListener('click',divclicked,true);
+        // btn.addEventListener('click',btnclicked,true);
+        // document.body.addEventListener('click',bodyclicked,true)
+
+
+        d.addEventListener('click',divclicked);
+        btn.addEventListener('click',btnclicked);
+        document.body.addEventListener('click',bodyclicked)
+        
+        function divclicked(){
+            console.log('Div Clicked...')
+        }
+        function btnclicked(event){
+            console.log('btn Clicked...')
+            event.stopPropagation();
+        }
+        function bodyclicked(){
+            console.log('body Clicked...')
+        }
+        
+
+  
+    </script>
+</body>
+</html>

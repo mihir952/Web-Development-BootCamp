@@ -37,4 +37,18 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-  
+
+  // var obj1={
+  //   'name':'airbnb-style',
+  //   'version':'2.0.0',
+  //   'description':"A mostly reasonable approach to Javascript.",
+  //   'scripts':{
+  //     'preinstall':'npm run install:config && npm run install:config:base',
+  //     'lint':'markdownlint  --config linters/.markdown.json'
+  //   }
+  // }
+
+
+
+  hayy 
+
