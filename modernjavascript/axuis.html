@@ -1,0 +1,47 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Fetching Data with Axios</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        async function getdata() {
+            const url = "https://api.github.com/users/mralexgray/repos";
+            try {
+                const response = await axios.get(url);
+                const data = response.data; // No need to access data.data
+               console.log(data)
+               data.forEach(element=>{
+
+               })
+
+            } catch (error) {
+                console.error(error);
+            }
+            
+        }
+        getdata();
+
+
+
+        async function fetchdata(){
+         const api="https://api.github.com/users/mralexgray/repos";
+         try{
+            const fetchresponse=await fetch(api);
+            const datafetch=fetchresponse.json();
+            console.log(datafetch);
+         }
+         catch(error){
+            console.error(error)
+         }
+        }
+        fetchdata()
+
+    
+    </script>
+</body>
+</html> 
+
+
+

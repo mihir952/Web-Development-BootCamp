@@ -15,6 +15,7 @@ app.get("/", (req, res) => {
   res.render("index.ejs", { content: "API Response." });
 });
 
+
 app.get("/noAuth", async (req, res) => {
   try {
     const result = await axios.get(API_URL + "/random");
@@ -67,7 +68,7 @@ app.get("/bearerToken", async (req, res) => {
   } catch (error) {
     res.status(404).send(error.message);
   }
-});
+});   
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
@@ -82,3 +83,4 @@ app.listen(port, () => {
 //     element.innerText=translation;
 //   })
 // }
+

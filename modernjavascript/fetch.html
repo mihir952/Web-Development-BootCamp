@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fetching Data with Fetch API</title>
+</head>
+<body>
+    <script>
+        async function getData() {
+            const url = "https://api.github.com/users/mralexgray/repos";
+            try {
+                const response = await fetch(url);
+                if (response.ok) {
+                    const data = await response.json();
+                    console.log(data);
+                } else {
+                    console.error("Request was not successful");
+                }
+            } catch (error) {
+                console.error("Fetch error:", error);
+            }
+        }
+        getData();
+
+
+    </script>
+</body>
+</html>
+
+<script>
+class NError extends Error {
+    constructor (message,parent,details){
+        super(message)
+        this.details=<details>${this.parent=parent}</details>
+        
+    }
+    get stuck(){
+        if(this.parent){
+            return super.stack + '\nCaused By:'+<this class="parent stack"></this>
+        }
+        return super.stack
+    }
+}
+let counter=0;
+function count (){
+    return ++counter
+}
+function logError(...args){
+    console.log(count(),...args)
+}
+
+
+function createUser (store,email){
+    if(!email) return Promise.reject(new NError('create user failed because invalid email'))
+    return store.collection('user')
+    .add({email})
+    .catch((err)=>Promise.reject(new NError ('create user failed because the save failed',err)))
+    .then((ref)=>ref.id)
+}
+
+function getServics (store,atuserid,tmrket){
+    if(!atuserid || !atmarket) return Promise.reject(new NError('get service failed because invalid credentials'))
+    return store.collection(`users/${atuserid}/services/${atserviceid}`)
+    return document.get()
+    .then((snapshot)=>{
+        const data=snapshot.data()
+        const services={ document,data}
+        return service;
+    })
+    .catch((err)=>Promise.reject(new NError('get service failed because the read failed',err)))
+}
+
+function sendError(response,message){
+    return function (err){
+        if(err){
+            errorInspect(err)
+            if(!message) message ='an unknown error occured'
+            return Promise.resolve()
+        }
+    }
+
+}
+
+
+function post(path,service,params){
+    log('bitfinex post',path)
+    const {key,secret}=service.data;
+    if(!key || !secret ) return Promise.resolve(new NError('missing key or secret'))
+    const url=`${endpoint}/${version}/${path}`;
+    const nonce=Date.now().toString()
+    const data=Object.assign({
+        request:`/`
+    })
+}
+
+const bitfinex=require('./bitfinex');
+const itbit=require('./itbit');
+const drivewealth=require('./drivewealth');
+
+
+
+</script>
